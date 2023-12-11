@@ -4,7 +4,6 @@ import * as tf from '@tensorflow/tfjs';
 import Webcam from 'react-webcam';
 import './App.css';
 import Navbar from './Navbar';
-// import { nextFrame } from '@tensorflow/tfjs';
 import { drawRect } from './utilities';
 
 function App() {
@@ -50,8 +49,7 @@ function App() {
       // Draw mesh
       const ctx = canvasRef.current.getContext('2d');
 
-      // 5. TODO - Update drawing utility
-      // drawSomething(obj, ctx)
+     
       requestAnimationFrame(() => {
         drawRect(boxes[0], classes[0], scores[0], 0.8, videoWidth, videoHeight, ctx);
       });
